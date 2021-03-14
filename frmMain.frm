@@ -805,7 +805,7 @@ If Robot.BuckleModelPresent Then
 End If
 Do
     If Mid$(Data, i, 1) = vbLf Then
-        Robot.ForwardHeading = Left$(Data, i - 1)
+        Robot.ForwardHeading = Val(Left$(Data, i - 1))
         Data = Right$(Data, Len(Data) - i)
         i = 1
         Exit Do
